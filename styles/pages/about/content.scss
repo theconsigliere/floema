@@ -1,0 +1,169 @@
+.about__content{
+    margin: 20rem auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  //  width: 125rem;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &:nth-child(5) {
+        justify-content: flex-end;
+    }
+
+    &:nth-child(8) {
+        justify-content: flex-start;
+    }
+
+    @include media ('<phone') {
+        &:nth-child(5) {
+            justify-content: flex-end;
+        }
+    
+        &:nth-child(8) {
+            justify-content: flex-start;
+        }
+    }
+
+}
+
+
+.about__content__wrapper{
+    display: flex;
+
+    .about__content--right & {
+        flex-direction: row-reverse;
+    }
+
+    @include media ('<phone') {
+        .about__content:nth-child(3) & ,  .about__content:nth-child(8) & , .about__content:nth-child(9) & {
+            flex-direction: column-reverse;
+        }
+
+        .about__content:nth-child(5) & {
+            flex-direction: column;
+        }
+
+
+    }
+
+}
+
+.about__content__box {
+    display: flex;
+
+    @include media ('<phone') {
+        width: 62rem;
+        margin: auto;
+        
+        .about__content:nth-child(3) & , .about__content:nth-child(8) & , .about__content:nth-child(9) & {
+            margin-top: 10rem;
+        }
+
+        .about__content:nth-child(5) & {
+            margin-bottom: 10rem;
+        }
+       }
+}
+
+
+.about__content__label{
+    width: 18rem;
+    @extend %description-12;
+    text-transform: uppercase;
+
+    @include media ('<phone') {
+        width: 15rem;
+        padding-right: 2.5rem;
+        word-break: break-all;
+        font-size: 2.4rem;
+    }
+
+}
+
+
+.about__content__description{
+    width: 36rem;
+
+    p:not(:first-child) {
+        margin-top: 2.5rem;
+    }
+
+    @include media ('<phone') {
+        width: calc(100% - 15rem );
+    }
+
+}
+
+.about__content__media{
+    position: relative;
+
+   .about__content:nth-child(3) & {
+       height: 81rem;
+       width: 54rem;
+       margin-left: 18rem;
+     
+
+   }
+
+   .about__content:nth-child(5) & {
+    height: 60rem;
+    width: 96rem;
+    margin-left: 18rem;
+
+}
+
+.about__content:nth-child(8) & {
+    height: 52rem;
+    width: 85rem;
+    margin-right: 18rem;
+
+}
+
+.about__content:nth-child(9) & {
+    height: 85rem;
+    width: 60rem;
+    margin-left: 22rem;
+
+}
+
+@include media ('<=phone') {
+    .about__content:nth-child(3) & {
+       margin-left: 0;
+       width: 100%;
+       height: 92rem;
+    }
+
+    .about__content:nth-child(5) & {
+        margin-left: 0;
+        width: 100vw;
+        height: 50rem;
+     }
+
+     .about__content:nth-child(8) & {
+        width: 100vw;
+        height: 52rem;
+        margin-right: 0;
+     }
+
+     .about__content:nth-child(9) & {
+        width: 61rem;
+        height: 86rem;
+        height: 52rem;
+        margin-left: 0;
+   
+     }
+   }
+}
+
+.about__content__media_image{
+    @extend %cover;
+    object-fit: cover;
+
+}

@@ -1,0 +1,28 @@
+
+.about{
+
+    opacity: 0;
+    @extend %page;
+
+    // 
+    //   background: $color-background-tertiary;
+    //   color: $color-off-black;
+    // 
+}
+
+.about__wrapper {
+ 
+}
+
+.about__title{
+  @extend %title-100;
+ margin: auto;
+ max-width: 128rem;
+ text-align: center;
+
+ @include media ('<phone') {
+    max-width: 68rem;
+  }
+}
+
+

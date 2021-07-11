@@ -1,0 +1,35 @@
+.about__gallery{
+    height: 60rem;
+    margin: 20rem 0;
+    position: relative;
+    overflow:  hidden;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+}
+.about__gallery__wrapper{
+position: absolute;
+display: flex;
+top: 50%;
+transform: translateY(-50%);
+}
+
+.about__gallery__media{
+    position: relative;
+    height: 44rem;
+    width: 30rem;
+    margin: 0 5rem;
+
+}
+
+.about__gallery__media_image{
+    @extend %cover;
+    object-fit: cover;
+
+}
